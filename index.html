@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="theme-color" content="#cfe0ff">
     <meta name="format-detection" content="telephone=no">
-    <title>English Lab B1</title>
+    <title>English Lab - B1</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -2116,6 +2116,72 @@
     </script>
 
     <script>
+    /* ===== FRASES DE PRÁTICA por lição: 10 afirmativas + 5 negativas + 5 interrogativas ===== */
+    /* [en, pt, "aff"|"neg"|"int"] */
+    var SENT = {};
+    SENT[1] = {
+        "1.1": [["I am from a small town near the coast.", "Eu sou de uma cidade pequena perto da costa.", "aff"], ["She is really easygoing and friendly.", "Ela é muito tranquila e amigável.", "aff"], ["My brother was born in the 1990s.", "Meu irmão nasceu nos anos 1990.", "aff"], ["We were raised by our grandparents.", "Nós fomos criados pelos nossos avós.", "aff"], ["I am into video games and music.", "Eu curto videogames e música.", "aff"], ["He lives with his family downtown.", "Ele mora com a família no centro.", "aff"], ["They are my new classmates.", "Eles são meus novos colegas de classe.", "aff"], ["I usually celebrate my birthday at home.", "Eu costumo comemorar meu aniversário em casa.", "aff"], ["My best friend is very generous.", "Meu melhor amigo é muito generoso.", "aff"], ["I'd like to know more about your work.", "Eu gostaria de saber mais sobre o seu trabalho.", "aff"], ["I am not from this city.", "Eu não sou desta cidade.", "neg"], ["She isn't very quiet in class.", "Ela não é muito quieta na aula.", "neg"], ["We weren't born in the same year.", "Nós não nascemos no mesmo ano.", "neg"], ["He doesn't live alone.", "Ele não mora sozinho.", "neg"], ["I'm not into sports at all.", "Eu não curto esportes de jeito nenhum.", "neg"], ["Where were you born?", "Onde você nasceu?", "int"], ["Do you know where she lives?", "Você sabe onde ela mora?", "int"], ["What kind of music are you into?", "Que tipo de música você curte?", "int"], ["Can you tell me how old he is?", "Você pode me dizer quantos anos ele tem?", "int"], ["Are they your coworkers?", "Eles são seus colegas de trabalho?", "int"]],
+        "1.2": [["I work with her in the same office.", "Eu trabalho com ela no mesmo escritório.", "aff"], ["My desk is next to hers.", "Minha mesa fica ao lado da dela.", "aff"], ["She is a good acquaintance of mine.", "Ela é uma boa conhecida minha.", "aff"], ["We are close friends now.", "Agora somos amigos próximos.", "aff"], ["He is my new neighbor.", "Ele é meu novo vizinho.", "aff"], ["I've heard good things about you.", "Ouvi coisas boas sobre você.", "aff"], ["It was really nice to meet you.", "Foi muito bom te conhecer.", "aff"], ["My boss is very friendly.", "Meu chefe é muito amigável.", "aff"], ["They started a business together.", "Eles começaram um negócio juntos.", "aff"], ["First impressions are important.", "As primeiras impressões são importantes.", "aff"], ["I don't know your name yet.", "Ainda não sei o seu nome.", "neg"], ["She isn't my coworker.", "Ela não é minha colega de trabalho.", "neg"], ["We aren't strangers anymore.", "Nós não somos mais estranhos.", "neg"], ["He isn't comfortable in big groups.", "Ele não fica confortável em grupos grandes.", "neg"], ["I'm not good at remembering faces.", "Eu não sou bom em lembrar de rostos.", "neg"], ["How do you two know each other?", "Como vocês dois se conhecem?", "int"], ["What kind of work do you do?", "Que tipo de trabalho você faz?", "int"], ["Are you a friend of Mark's?", "Você é amigo do Mark?", "int"], ["Do you work here?", "Você trabalha aqui?", "int"], ["Can I introduce you to my boss?", "Posso te apresentar ao meu chefe?", "int"]],
+        "1.3": [["I have heard a lot about this city.", "Ouvi falar muito desta cidade.", "aff"], ["She has always been very kind.", "Ela sempre foi muito gentil.", "aff"], ["We have known each other for years.", "Nós nos conhecemos há anos.", "aff"], ["He told me that he liked the job.", "Ele me disse que gostava do emprego.", "aff"], ["She asked me where I lived.", "Ela me perguntou onde eu morava.", "aff"], ["I have just finished my degree.", "Acabei de concluir meu curso.", "aff"], ["They have visited many countries.", "Eles já visitaram muitos países.", "aff"], ["My aunt has lived here since 2010.", "Minha tia mora aqui desde 2010.", "aff"], ["I've changed my mind about him.", "Mudei de ideia sobre ele.", "aff"], ["He explained that the house was old.", "Ele explicou que a casa era antiga.", "aff"], ["I haven't met her parents yet.", "Ainda não conheci os pais dela.", "neg"], ["She hasn't replied to my email.", "Ela não respondeu ao meu e-mail.", "neg"], ["We haven't been there before.", "Nós nunca estivemos lá antes.", "neg"], ["He didn't say where he was going.", "Ele não disse para onde estava indo.", "neg"], ["I've never judged people by their looks.", "Nunca julguei as pessoas pela aparência.", "neg"], ["Have you ever been wrong about someone?", "Você já se enganou sobre alguém?", "int"], ["Has she finished the project yet?", "Ela já terminou o projeto?", "int"], ["Did he tell you the truth?", "Ele te disse a verdade?", "int"], ["How long have you known him?", "Há quanto tempo você o conhece?", "int"], ["What did she ask you?", "O que ela te perguntou?", "int"]],
+        "1.4": [["I wish I was on vacation right now.", "Eu queria estar de férias agora.", "aff"], ["I wish I had asked him earlier.", "Eu queria ter perguntado a ele antes.", "aff"], ["She wishes she could speak French.", "Ela queria poder falar francês.", "aff"], ["He said that he was tired.", "Ele disse que estava cansado.", "aff"], ["They told us the house belonged to their family.", "Eles nos contaram que a casa pertencia à família deles.", "aff"], ["I have read that book twice.", "Eu li aquele livro duas vezes.", "aff"], ["I hit the gym every morning.", "Eu vou à academia toda manhã.", "aff"], ["I wish my friends lived closer.", "Eu queria que meus amigos morassem mais perto.", "aff"], ["She apologized for the mistake.", "Ela pediu desculpas pelo erro.", "aff"], ["He forgave me quickly.", "Ele me perdoou rápido.", "aff"], ["I don't wish to argue about it.", "Eu não quero discutir sobre isso.", "neg"], ["She didn't tell me the whole story.", "Ela não me contou a história toda.", "neg"], ["We weren't ready for the news.", "Nós não estávamos prontos para a notícia.", "neg"], ["He hasn't apologized yet.", "Ele ainda não pediu desculpas.", "neg"], ["I wasn't wearing my apron.", "Eu não estava usando meu avental.", "neg"], ["Do you wish you had more free time?", "Você queria ter mais tempo livre?", "int"], ["What did he say about the house?", "O que ele disse sobre a casa?", "int"], ["Did she ask if you had studied?", "Ela perguntou se você tinha estudado?", "int"], ["Have you read this story before?", "Você já leu esta história antes?", "int"], ["Would you forgive a friend for that?", "Você perdoaria um amigo por isso?", "int"]]
+    };
+    SENT[2] = {
+        "2.1": [["I've already downloaded the new app.", "Já baixei o novo aplicativo.", "aff"], ["She has already set up her phone.", "Ela já configurou o celular dela.", "aff"], ["We've already synced our photos.", "Já sincronizamos nossas fotos.", "aff"], ["They have already bought more storage.", "Eles já compraram mais armazenamento.", "aff"], ["I've just deleted some old files.", "Acabei de apagar alguns arquivos antigos.", "aff"], ["He has already created an account.", "Ele já criou uma conta.", "aff"], ["My laptop has already updated.", "Meu notebook já atualizou.", "aff"], ["I've already tried the new camera.", "Já testei a câmera nova.", "aff"], ["We've backed up everything today.", "Fizemos backup de tudo hoje.", "aff"], ["The software has already changed a lot.", "O software já mudou bastante.", "aff"], ["I haven't tried the new feature yet.", "Ainda não testei o novo recurso.", "neg"], ["She hasn't downloaded the update yet.", "Ela ainda não baixou a atualização.", "neg"], ["We haven't run out of space yet.", "Ainda não ficamos sem espaço.", "neg"], ["He hasn't synced his files yet.", "Ele ainda não sincronizou os arquivos.", "neg"], ["They haven't bought a new device yet.", "Eles ainda não compraram um aparelho novo.", "neg"], ["Have you set up your phone yet?", "Você já configurou o celular?", "int"], ["Has she tried the camera yet?", "Ela já testou a câmera?", "int"], ["Have they bought more storage yet?", "Eles já compraram mais armazenamento?", "int"], ["Have you backed up your files yet?", "Você já fez backup dos arquivos?", "int"], ["Has the app updated already?", "O aplicativo já atualizou?", "int"]],
+        "2.2": [["I keep all my photos in one folder.", "Guardo todas as minhas fotos em uma pasta.", "aff"], ["She showed me her old collection.", "Ela me mostrou a coleção antiga dela.", "aff"], ["By the way, I found your wallet.", "Aliás, achei a sua carteira.", "aff"], ["Guess what — I sold my old tablet.", "Adivinha — vendi meu tablet antigo.", "aff"], ["He told me that he wanted a new phone.", "Ele me disse que queria um celular novo.", "aff"], ["This box is full of old gifts.", "Esta caixa está cheia de presentes antigos.", "aff"], ["I brought the package to your house.", "Levei a encomenda até a sua casa.", "aff"], ["We keep up with the news online.", "Acompanhamos as notícias online.", "aff"], ["The video went viral last week.", "O vídeo viralizou semana passada.", "aff"], ["She paid for the whole thing.", "Ela pagou por tudo.", "aff"], ["I don't keep old messages.", "Eu não guardo mensagens antigas.", "neg"], ["He didn't bring the gift.", "Ele não trouxe o presente.", "neg"], ["We don't want to change the subject.", "Não queremos mudar de assunto.", "neg"], ["She hasn't lost her wallet again.", "Ela não perdeu a carteira de novo.", "neg"], ["They didn't tell me about the event.", "Eles não me contaram sobre o evento.", "neg"], ["By the way, did you see my message?", "Aliás, você viu minha mensagem?", "int"], ["Did he sell his collection?", "Ele vendeu a coleção?", "int"], ["Have you lost your keys again?", "Você perdeu as chaves de novo?", "int"], ["What did she say about the gift?", "O que ela disse sobre o presente?", "int"], ["Can you keep this box for me?", "Você pode guardar esta caixa para mim?", "int"]],
+        "2.3": [["He used to collect old coins.", "Ele costumava colecionar moedas antigas.", "aff"], ["I used to buy a lot of comic books.", "Eu costumava comprar muitos gibis.", "aff"], ["This card was signed by the artist.", "Este card foi assinado pelo artista.", "aff"], ["The ad was written by a collector.", "O anúncio foi escrito por um colecionador.", "aff"], ["This painting is more valuable than that one.", "Esta pintura é mais valiosa que aquela.", "aff"], ["The book is as old as the photo.", "O livro é tão velho quanto a foto.", "aff"], ["If it were new, it would cost more.", "Se fosse novo, custaria mais.", "aff"], ["I want the one that is in good condition.", "Quero o que está em bom estado.", "aff"], ["She gave away her old toys.", "Ela doou os brinquedos antigos dela.", "aff"], ["These stamps are worth a fortune.", "Estes selos valem uma fortuna.", "aff"], ["I didn't use to sell my things.", "Eu não costumava vender minhas coisas.", "neg"], ["He doesn't want the damaged one.", "Ele não quer o danificado.", "neg"], ["This coin isn't as rare as that one.", "Esta moeda não é tão rara quanto aquela.", "neg"], ["They didn't throw away the old records.", "Eles não jogaram fora os discos antigos.", "neg"], ["I wouldn't sell it if it were signed.", "Eu não venderia se estivesse assinado.", "neg"], ["Did you use to collect anything?", "Você costumava colecionar alguma coisa?", "int"], ["Was this poster made by hand?", "Este pôster foi feito à mão?", "int"], ["Which one is more valuable?", "Qual é o mais valioso?", "int"], ["Would you sell it for that price?", "Você venderia por esse preço?", "int"], ["Have you ever sold something online?", "Você já vendeu algo online?", "int"]],
+        "2.4": [["He turned an old tire into a table.", "Ele transformou um pneu velho em uma mesa.", "aff"], ["This piece is handmade and unique.", "Esta peça é feita à mão e única.", "aff"], ["She shared the photo with her friends.", "Ela compartilhou a foto com os amigos.", "aff"], ["It was worth the effort.", "Valeu o esforço.", "aff"], ["This vintage lamp still works.", "Este abajur retrô ainda funciona.", "aff"], ["They brought the old furniture to life.", "Eles deram vida aos móveis antigos.", "aff"], ["The amateur artist sold his first painting.", "O artista amador vendeu sua primeira pintura.", "aff"], ["This object has real value.", "Este objeto tem valor de verdade.", "aff"], ["I keep it because it's special.", "Guardo porque é especial.", "aff"], ["We fixed the broken chair.", "Consertamos a cadeira quebrada.", "aff"], ["It isn't useless at all.", "Não é nada inútil.", "neg"], ["She didn't throw the old reel away.", "Ela não jogou fora o carretel antigo.", "neg"], ["This isn't an ordinary gift.", "Este não é um presente comum.", "neg"], ["He doesn't sell his handcrafts.", "Ele não vende os artesanatos dele.", "neg"], ["They didn't waste the old material.", "Eles não desperdiçaram o material antigo.", "neg"], ["What did he make from the tire?", "O que ele fez com o pneu?", "int"], ["Is this handmade?", "Isto é feito à mão?", "int"], ["How much could it be worth?", "Quanto pode valer?", "int"], ["Can you turn this into something useful?", "Você consegue transformar isto em algo útil?", "int"], ["Did she share the photo with you?", "Ela compartilhou a foto com você?", "int"]]
+    };
+    SENT[3] = {
+        "3.1": [["You should take the train to the airport.", "Você deveria pegar o trem para o aeroporto.", "aff"], ["You could take a taxi if you're late.", "Você poderia pegar um táxi se estiver atrasado.", "aff"], ["I would book the flight today.", "Eu reservaria o voo hoje.", "aff"], ["We should compare the fares first.", "Deveríamos comparar as tarifas primeiro.", "aff"], ["The first ferry leaves at midnight.", "A primeira balsa parte à meia-noite.", "aff"], ["You should check the schedule online.", "Você deveria verificar o horário online.", "aff"], ["I would transfer at the next station.", "Eu faria a baldeação na próxima estação.", "aff"], ["They should make a reservation now.", "Eles deveriam fazer uma reserva agora.", "aff"], ["The subway is the most convenient option.", "O metrô é a opção mais conveniente.", "aff"], ["You could get off at the next stop.", "Você poderia descer no próximo ponto.", "aff"], ["You shouldn't take the subway now.", "Você não deveria pegar o metrô agora.", "neg"], ["I wouldn't drive downtown at this hour.", "Eu não dirigiria no centro a esta hora.", "neg"], ["We shouldn't miss the last ferry.", "Não deveríamos perder a última balsa.", "neg"], ["He couldn't find a direct flight.", "Ele não conseguiu achar um voo direto.", "neg"], ["They didn't book the tickets in time.", "Eles não reservaram as passagens a tempo.", "neg"], ["Which bus should I take?", "Qual ônibus eu deveria pegar?", "int"], ["Should we take a taxi instead?", "Deveríamos pegar um táxi?", "int"], ["Could you tell me the fare?", "Você poderia me dizer a tarifa?", "int"], ["How should I get to the station?", "Como eu deveria chegar à estação?", "int"], ["Would you take the ferry or the train?", "Você pegaria a balsa ou o trem?", "int"]],
+        "3.2": [["Go straight down this hallway.", "Siga em frente por este corredor.", "aff"], ["Take the elevator to the fifth floor.", "Pegue o elevador até o quinto andar.", "aff"], ["The cafeteria is in the basement.", "A cafeteria fica no subsolo.", "aff"], ["It's the third door on your right.", "É a terceira porta à direita.", "aff"], ["The meeting room is upstairs.", "A sala de reuniões fica no andar de cima.", "aff"], ["The reception desk is in the lobby.", "A recepção fica no saguão.", "aff"], ["The bus stops across the street.", "O ônibus para do outro lado da rua.", "aff"], ["It comes about every twenty minutes.", "Ele passa a cada vinte minutos, mais ou menos.", "aff"], ["Walk to the corner and turn left.", "Caminhe até a esquina e vire à esquerda.", "aff"], ["The restroom is down the hall.", "O banheiro fica no fim do corredor.", "aff"], ["It isn't on this floor.", "Não é neste andar.", "neg"], ["The elevator isn't working today.", "O elevador não está funcionando hoje.", "neg"], ["You don't need to take the stairs.", "Você não precisa pegar as escadas.", "neg"], ["The cafeteria isn't open yet.", "A cafeteria ainda não está aberta.", "neg"], ["I don't know where the lobby is.", "Eu não sei onde fica o saguão.", "neg"], ["Excuse me, how do I get to the lobby?", "Com licença, como chego ao saguão?", "int"], ["Which way is the meeting room?", "Por onde fica a sala de reuniões?", "int"], ["Is the restroom upstairs or downstairs?", "O banheiro fica em cima ou embaixo?", "int"], ["Can you tell me where the elevator is?", "Você pode me dizer onde fica o elevador?", "int"], ["Where does the bus stop?", "Onde o ônibus para?", "int"]],
+        "3.3": [["The race starts at the ferry terminal.", "A corrida começa no terminal de balsa.", "aff"], ["Volunteers will hand out water.", "Os voluntários vão distribuir água.", "aff"], ["I have organized two cultural events.", "Eu organizei dois eventos culturais.", "aff"], ["We will cheer the runners on.", "Vamos torcer pelos corredores.", "aff"], ["The festival happens every summer.", "O festival acontece todo verão.", "aff"], ["She has volunteered here before.", "Ela já foi voluntária aqui antes.", "aff"], ["You will get a certificate at the end.", "Você vai receber um certificado no final.", "aff"], ["I know the city very well.", "Eu conheço a cidade muito bem.", "aff"], ["They will stand along the route.", "Eles vão ficar ao longo do trajeto.", "aff"], ["I was born and raised here.", "Nasci e fui criado aqui.", "aff"], ["The event isn't free this year.", "O evento não é gratuito este ano.", "neg"], ["I haven't volunteered before.", "Eu nunca fui voluntário antes.", "neg"], ["We won't finish before noon.", "Não vamos terminar antes do meio-dia.", "neg"], ["She doesn't know the route well.", "Ela não conhece bem o trajeto.", "neg"], ["They didn't sign up in time.", "Eles não se inscreveram a tempo.", "neg"], ["Have you ever volunteered before?", "Você já foi voluntário antes?", "int"], ["What time does the race start?", "Que horas a corrida começa?", "int"], ["Will you help at the festival?", "Você vai ajudar no festival?", "int"], ["Where do volunteers meet?", "Onde os voluntários se encontram?", "int"], ["How do you get around the city?", "Como você circula pela cidade?", "int"]],
+        "3.4": [["You have already helped a lot.", "Você já ajudou muito.", "aff"], ["I have waited on the sidewalk for an hour.", "Esperei na calçada por uma hora.", "aff"], ["The cultures mix in different neighborhoods.", "As culturas se misturam em bairros diferentes.", "aff"], ["We have been to this festival before.", "Já fomos a este festival antes.", "aff"], ["People have come from many countries.", "Pessoas vieram de muitos países.", "aff"], ["The street market opens early.", "A feira de rua abre cedo.", "aff"], ["I have tried food from many cultures.", "Já provei comida de muitas culturas.", "aff"], ["They have lived here all their lives.", "Eles moraram aqui a vida toda.", "aff"], ["The concert area is near the park.", "A área de show fica perto do parque.", "aff"], ["She has helped organize the schedule.", "Ela ajudou a organizar a programação.", "aff"], ["I haven't seen the parade yet.", "Ainda não vi o desfile.", "neg"], ["We haven't tried that dish before.", "Nunca provamos aquele prato antes.", "neg"], ["He hasn't arrived at the festival yet.", "Ele ainda não chegou ao festival.", "neg"], ["They don't close the market early.", "Eles não fecham o mercado cedo.", "neg"], ["I wasn't at the concert last night.", "Eu não estava no show ontem à noite.", "neg"], ["Have you ever been to a street market?", "Você já foi a uma feira de rua?", "int"], ["Has the festival started yet?", "O festival já começou?", "int"], ["Weren't you at the concert?", "Você não estava no show?", "int"], ["How many countries are represented here?", "Quantos países estão representados aqui?", "int"], ["Have you helped at an event before?", "Você já ajudou em um evento antes?", "int"]]
+    };
+    </script>
+
+    <script>
+    SENT[4] = {
+        "4.1": [["I'm really looking forward to the trip.", "Estou muito ansioso pela viagem.", "aff"], ["We need to get in touch with the hotel.", "Precisamos entrar em contato com o hotel.", "aff"], ["She arranged a coffee date for Friday.", "Ela marcou um café para sexta.", "aff"], ["I'm excited about the adventure.", "Estou animado com a aventura.", "aff"], ["The documentary was fascinating.", "O documentário foi fascinante.", "aff"], ["He dealt with the reservations.", "Ele cuidou das reservas.", "aff"], ["Let's meet up before we leave.", "Vamos nos encontrar antes de sair.", "aff"], ["I packed my bags last night.", "Arrumei as malas ontem à noite.", "aff"], ["The trip was really exciting.", "A viagem foi muito empolgante.", "aff"], ["We made a decision about the dates.", "Tomamos uma decisão sobre as datas.", "aff"], ["I'm not worried about the weather.", "Não estou preocupado com o clima.", "neg"], ["She didn't forget to pack the guidebook.", "Ela não esqueceu de levar o guia.", "neg"], ["We haven't booked the hotel yet.", "Ainda não reservamos o hotel.", "neg"], ["He isn't interested in camping.", "Ele não está interessado em acampar.", "neg"], ["I didn't miss your call on purpose.", "Eu não perdi sua ligação de propósito.", "neg"], ["Are you looking forward to the trip?", "Você está ansioso pela viagem?", "int"], ["Did you get in touch with the guide?", "Você entrou em contato com o guia?", "int"], ["Were you surprised by the ending?", "Você ficou surpreso com o final?", "int"], ["Can we meet up tomorrow?", "Podemos nos encontrar amanhã?", "int"], ["Have you made a decision yet?", "Você já tomou uma decisão?", "int"]],
+        "4.2": [["Don't worry about it — you'll be fine.", "Não se preocupe — vai ficar tudo bem.", "aff"], ["These things happen to everyone.", "Essas coisas acontecem com todo mundo.", "aff"], ["I felt really nervous before the interview.", "Fiquei muito nervoso antes da entrevista.", "aff"], ["At least no one was hurt.", "Pelo menos ninguém se machucou.", "aff"], ["It worked out in the end.", "No final deu certo.", "aff"], ["You can take the test again.", "Você pode fazer a prova de novo.", "aff"], ["I feel a bit better now.", "Estou me sentindo um pouco melhor agora.", "aff"], ["She passed the driving test.", "Ela passou no teste de direção.", "aff"], ["He stayed calm during the problem.", "Ele ficou calmo durante o problema.", "aff"], ["I felt embarrassed, but it was fine.", "Fiquei envergonhado, mas tudo bem.", "aff"], ["I didn't pass the test this time.", "Eu não passei na prova desta vez.", "neg"], ["Don't feel bad about the mistake.", "Não se sinta mal pelo erro.", "neg"], ["She isn't stressed about the result.", "Ela não está estressada com o resultado.", "neg"], ["We didn't expect that problem.", "Não esperávamos aquele problema.", "neg"], ["He didn't give up after failing.", "Ele não desistiu depois de reprovar.", "neg"], ["Are you all right?", "Você está bem?", "int"], ["Did you pass the interview?", "Você passou na entrevista?", "int"], ["Why do you feel embarrassed?", "Por que você está envergonhado?", "int"], ["Can I take the test again?", "Posso fazer a prova de novo?", "int"], ["What happened at the meeting?", "O que aconteceu na reunião?", "int"]],
+        "4.3": [["We're throwing a surprise party for Ana.", "Vamos fazer uma festa surpresa para a Ana.", "aff"], ["First, we'll blow up the balloons.", "Primeiro, vamos encher os balões.", "aff"], ["After that, we'll set up the music.", "Depois, vamos preparar a música.", "aff"], ["Everyone will hide and yell surprise.", "Todos vão se esconder e gritar surpresa.", "aff"], ["The barbecue starts at noon.", "O churrasco começa ao meio-dia.", "aff"], ["Please bring a dessert to share.", "Por favor, traga uma sobremesa para dividir.", "aff"], ["We'll have a great time at the pool.", "Vamos nos divertir muito na piscina.", "aff"], ["The party is at the community center.", "A festa é no centro comunitário.", "aff"], ["I'll send the invitations tonight.", "Vou enviar os convites hoje à noite.", "aff"], ["Get ready for a fun day.", "Prepare-se para um dia divertido.", "aff"], ["Don't tell anyone about the party.", "Não conte a ninguém sobre a festa.", "neg"], ["We aren't ready yet.", "Ainda não estamos prontos.", "neg"], ["She didn't bring the dessert.", "Ela não trouxe a sobremesa.", "neg"], ["They won't arrive before noon.", "Eles não vão chegar antes do meio-dia.", "neg"], ["I can't make it on Saturday.", "Não vou conseguir ir no sábado.", "neg"], ["Can you come to the party?", "Você pode vir à festa?", "int"], ["What should I bring to the barbecue?", "O que eu devo levar para o churrasco?", "int"], ["Where is the surprise party?", "Onde é a festa surpresa?", "int"], ["Are you ready to yell surprise?", "Você está pronto para gritar surpresa?", "int"], ["Did you send the invitations?", "Você enviou os convites?", "int"]],
+        "4.4": [["Last Saturday we went to the zoo.", "No sábado passado fomos ao zoológico.", "aff"], ["A worker in a bear costume surprised the kids.", "Um funcionário fantasiado de urso surpreendeu as crianças.", "aff"], ["The thunder was really frightening.", "O trovão foi muito assustador.", "aff"], ["We had an amazing time anyway.", "Mesmo assim nos divertimos muito.", "aff"], ["I recorded the whole show.", "Gravei o show inteiro.", "aff"], ["She chose a scary movie.", "Ela escolheu um filme de terror.", "aff"], ["He laughed at the funny scene.", "Ele riu da cena engraçada.", "aff"], ["The storm started in the afternoon.", "A tempestade começou à tarde.", "aff"], ["We won the game last night.", "Ganhamos o jogo ontem à noite.", "aff"], ["They suggested a new restaurant.", "Eles sugeriram um restaurante novo.", "aff"], ["We didn't expect that ending.", "Não esperávamos aquele final.", "neg"], ["I wasn't bored at all.", "Eu não estava entediado de jeito nenhum.", "neg"], ["She didn't enjoy the concert.", "Ela não gostou do show.", "neg"], ["They didn't find a parking space.", "Eles não acharam vaga de estacionamento.", "neg"], ["He didn't win the prize.", "Ele não ganhou o prêmio.", "neg"], ["Did you have a good time?", "Você se divertiu?", "int"], ["Why didn't you enjoy the movie?", "Por que você não gostou do filme?", "int"], ["Were you shocked by the news?", "Você ficou chocado com a notícia?", "int"], ["What did you do last weekend?", "O que você fez no fim de semana passado?", "int"], ["Did it rain during the trip?", "Choveu durante a viagem?", "int"]]
+    };
+    SENT[5] = {
+        "5.1": [["My car broke down on the highway.", "Meu carro quebrou na rodovia.", "aff"], ["Luckily, a neighbor gave me a ride.", "Felizmente, um vizinho me deu carona.", "aff"], ["I got lost downtown yesterday.", "Me perdi no centro ontem.", "aff"], ["She warned me about the traffic.", "Ela me avisou sobre o trânsito.", "aff"], ["I'm writing to remind you of the lunch.", "Escrevo para lembrar você do almoço.", "aff"], ["The food was absolutely delicious.", "A comida estava deliciosa.", "aff"], ["We were grateful for the help.", "Ficamos gratos pela ajuda.", "aff"], ["There is parking near the restaurant.", "Tem estacionamento perto do restaurante.", "aff"], ["I searched for my wallet everywhere.", "Procurei minha carteira em todo lugar.", "aff"], ["He took care of everything.", "Ele cuidou de tudo.", "aff"], ["I didn't find my wallet.", "Eu não achei minha carteira.", "neg"], ["We weren't late for the lunch.", "Não nos atrasamos para o almoço.", "neg"], ["She didn't warn us about the rain.", "Ela não nos avisou sobre a chuva.", "neg"], ["He isn't in trouble anymore.", "Ele não está mais em apuros.", "neg"], ["The car didn't start this morning.", "O carro não pegou hoje de manhã.", "neg"], ["Did you search for it everywhere?", "Você procurou em todo lugar?", "int"], ["Why were you late?", "Por que você se atrasou?", "int"], ["Can you give me a ride?", "Você pode me dar uma carona?", "int"], ["Did your car break down again?", "Seu carro quebrou de novo?", "int"], ["Where did you get lost?", "Onde você se perdeu?", "int"]],
+        "5.2": [["I was cooking dinner when the phone rang.", "Eu estava cozinhando o jantar quando o telefone tocou.", "aff"], ["While I was walking home, it started to rain.", "Enquanto eu voltava para casa, começou a chover.", "aff"], ["They were waiting for the bus.", "Eles estavam esperando o ônibus.", "aff"], ["The lights went out while we were watching TV.", "As luzes apagaram enquanto assistíamos TV.", "aff"], ["She was sleeping when the storm began.", "Ela estava dormindo quando a tempestade começou.", "aff"], ["We were talking when he arrived.", "Estávamos conversando quando ele chegou.", "aff"], ["My phone died while I was texting.", "Meu celular descarregou enquanto eu mandava mensagem.", "aff"], ["He was driving home in the wind.", "Ele estava dirigindo para casa no vento.", "aff"], ["I was reading when I heard a noise.", "Eu estava lendo quando ouvi um barulho.", "aff"], ["The band was playing in the park.", "A banda estava tocando no parque.", "aff"], ["I wasn't listening to the radio.", "Eu não estava ouvindo o rádio.", "neg"], ["We weren't expecting visitors.", "Não estávamos esperando visitas.", "neg"], ["She wasn't paying attention.", "Ela não estava prestando atenção.", "neg"], ["They weren't talking during the movie.", "Eles não estavam conversando durante o filme.", "neg"], ["It wasn't raining when we left.", "Não estava chovendo quando saímos.", "neg"], ["What were you doing at 8 p.m.?", "O que você estava fazendo às 20h?", "int"], ["Were you sleeping when I called?", "Você estava dormindo quando liguei?", "int"], ["What happened while you were out?", "O que aconteceu enquanto você estava fora?", "int"], ["Was it raining when you arrived?", "Estava chovendo quando você chegou?", "int"], ["Were they waiting for a long time?", "Eles estavam esperando há muito tempo?", "int"]],
+        "5.3": [["Guess what — I saw an old friend downtown.", "Adivinha — vi um amigo antigo no centro.", "aff"], ["You'll never believe what happened.", "Você não vai acreditar no que aconteceu.", "aff"], ["She plays in a famous band now.", "Ela toca em uma banda famosa agora.", "aff"], ["He's moving to another city.", "Ele está se mudando para outra cidade.", "aff"], ["I couldn't believe my eyes.", "Não conseguia acreditar nos meus olhos.", "aff"], ["They got married last month.", "Eles se casaram mês passado.", "aff"], ["She found a diamond ring on the street.", "Ela achou um anel de diamante na rua.", "aff"], ["That's the most incredible story.", "Essa é a história mais incrível.", "aff"], ["He earns a lot in his new job.", "Ele ganha muito no novo emprego.", "aff"], ["I ran into my old teacher today.", "Encontrei meu antigo professor hoje.", "aff"], ["I couldn't believe it either.", "Eu também não conseguia acreditar.", "neg"], ["She didn't tell anyone the news.", "Ela não contou a notícia a ninguém.", "neg"], ["He isn't moving after all.", "No fim das contas, ele não vai se mudar.", "neg"], ["We didn't know about the wedding.", "Não sabíamos do casamento.", "neg"], ["They weren't surprised at all.", "Eles não ficaram nem um pouco surpresos.", "neg"], ["Guess who I saw today?", "Adivinha quem eu vi hoje?", "int"], ["Is that really true?", "Isso é verdade mesmo?", "int"], ["Are you serious?", "Você está falando sério?", "int"], ["What happened next?", "O que aconteceu depois?", "int"], ["Did she really say that?", "Ela disse isso mesmo?", "int"]],
+        "5.4": [["One night, the lights suddenly went out.", "Uma noite, as luzes de repente apagaram.", "aff"], ["I heard a strange noise in the distance.", "Ouvi um barulho estranho à distância.", "aff"], ["My heart was beating fast.", "Meu coração estava batendo rápido.", "aff"], ["Then I realized it was just the cat.", "Aí percebi que era só o gato.", "aff"], ["We screamed and screamed.", "A gente gritou e gritou.", "aff"], ["A huge creature appeared in the woods.", "Uma criatura enorme apareceu na floresta.", "aff"], ["She walked slowly toward the window.", "Ela caminhou devagar até a janela.", "aff"], ["I tripped over the lamp in the dark.", "Tropecei no abajur no escuro.", "aff"], ["Suddenly, everything went quiet.", "De repente, tudo ficou em silêncio.", "aff"], ["In the end, we calmed down.", "No final, nos acalmamos.", "aff"], ["I wasn't dreaming.", "Eu não estava sonhando.", "neg"], ["We didn't know what it was.", "Não sabíamos o que era.", "neg"], ["She didn't scream at first.", "Ela não gritou no começo.", "neg"], ["It wasn't a monster after all.", "No fim das contas, não era um monstro.", "neg"], ["They weren't afraid of the dark.", "Eles não tinham medo do escuro.", "neg"], ["What was that noise?", "Que barulho foi esse?", "int"], ["Were you frightened?", "Você ficou assustado?", "int"], ["What happened in the woods?", "O que aconteceu na floresta?", "int"], ["Did you see the creature?", "Você viu a criatura?", "int"], ["Why did you scream?", "Por que você gritou?", "int"]]
+    };
+    SENT[6] = {
+        "6.1": [["There is so much traffic downtown.", "Tem tanto trânsito no centro.", "aff"], ["There are a few trees in my neighborhood.", "Há algumas árvores no meu bairro.", "aff"], ["Almost all of the land is concrete.", "Quase todo o terreno é de concreto.", "aff"], ["I wake up several times a night.", "Acordo várias vezes por noite.", "aff"], ["There is a lot of pollution here.", "Há muita poluição aqui.", "aff"], ["The air is never really clean.", "O ar nunca está realmente limpo.", "aff"], ["There is very little open space.", "Tem muito pouco espaço aberto.", "aff"], ["I love living close to so many people.", "Eu amo morar perto de tantas pessoas.", "aff"], ["There is graffiti on the buildings.", "Tem grafite nos prédios.", "aff"], ["Factories produce a lot of smoke.", "As fábricas produzem muita fumaça.", "aff"], ["There aren't many parks nearby.", "Não há muitos parques por perto.", "neg"], ["There isn't much fresh air.", "Não tem muito ar fresco.", "neg"], ["There aren't any high-rise buildings in my hometown.", "Não há prédios altos na minha cidade natal.", "neg"], ["I don't have much free time.", "Eu não tenho muito tempo livre.", "neg"], ["There is almost no noise at night.", "Quase não tem barulho à noite.", "neg"], ["Is there much traffic in your city?", "Tem muito trânsito na sua cidade?", "int"], ["How many trees are there?", "Quantas árvores há?", "int"], ["Is there any information about it?", "Há alguma informação sobre isso?", "int"], ["Are there a lot of factories here?", "Há muitas fábricas aqui?", "int"], ["How much space do you have?", "Quanto espaço você tem?", "int"]],
+        "6.2": [["If we plant more trees, the city will be better.", "Se plantarmos mais árvores, a cidade será melhor.", "aff"], ["If there is a lot of garbage, people drop more.", "Se há muito lixo, as pessoas jogam mais.", "aff"], ["Many artists paint beautifully.", "Muitos artistas pintam lindamente.", "aff"], ["When you speak calmly, people listen.", "Quando você fala com calma, as pessoas escutam.", "aff"], ["If you ride safely, you avoid accidents.", "Se você anda com segurança, evita acidentes.", "aff"], ["She drives very carefully.", "Ela dirige com muito cuidado.", "aff"], ["If we recycle, we reduce pollution.", "Se reciclarmos, reduzimos a poluição.", "aff"], ["He explained the rule clearly.", "Ele explicou a regra claramente.", "aff"], ["If visitors come, the city earns money.", "Se os visitantes vêm, a cidade ganha dinheiro.", "aff"], ["They work together to solve the problem.", "Eles trabalham juntos para resolver o problema.", "aff"], ["If you don't write clearly, it's hard to understand.", "Se você não escreve com clareza, é difícil entender.", "neg"], ["She doesn't drive dangerously.", "Ela não dirige perigosamente.", "neg"], ["If we don't take care of the city, visitors won't come.", "Se não cuidarmos da cidade, os visitantes não virão.", "neg"], ["He didn't speak politely.", "Ele não falou educadamente.", "neg"], ["They don't clean up after the event.", "Eles não limpam depois do evento.", "neg"], ["What happens if it rains?", "O que acontece se chover?", "int"], ["Do you speak English well?", "Você fala inglês bem?", "int"], ["Who drives safely in your family?", "Quem dirige com segurança na sua família?", "int"], ["What will you do if the bus is late?", "O que você vai fazer se o ônibus atrasar?", "int"], ["How can we solve this problem?", "Como podemos resolver este problema?", "int"]],
+        "6.3": [["My car broke down and the road was blocked.", "Meu carro quebrou e a estrada estava bloqueada.", "aff"], ["No one was hurt in the accident.", "Ninguém se machucou no acidente.", "aff"], ["We ran out of gas on the highway.", "Ficamos sem gasolina na rodovia.", "aff"], ["I made it home just in time.", "Cheguei em casa bem na hora.", "aff"], ["The building caught on fire last night.", "O prédio pegou fogo ontem à noite.", "aff"], ["I was so relieved to hear that.", "Fiquei tão aliviado em ouvir isso.", "aff"], ["The ambulance arrived quickly.", "A ambulância chegou rápido.", "aff"], ["It was pretty scary, though.", "Mesmo assim foi bem assustador.", "aff"], ["The road was completely icy.", "A estrada estava completamente com gelo.", "aff"], ["We got stuck in the flood.", "Ficamos presos na enchente.", "aff"], ["No one was hurt, fortunately.", "Felizmente, ninguém se machucou.", "neg"], ["The car didn't start at all.", "O carro não pegou de jeito nenhum.", "neg"], ["We didn't make it on time.", "Não chegamos a tempo.", "neg"], ["She wasn't worried about the storm.", "Ela não estava preocupada com a tempestade.", "neg"], ["They didn't see the accident.", "Eles não viram o acidente.", "neg"], ["Are you all right?", "Você está bem?", "int"], ["Was anyone hurt?", "Alguém se machucou?", "int"], ["What happened on the road?", "O que aconteceu na estrada?", "int"], ["Did you make it home safely?", "Você chegou em casa em segurança?", "int"], ["Why was the road blocked?", "Por que a estrada estava bloqueada?", "int"]],
+        "6.4": [["Drones will deliver packages faster.", "Os drones vão entregar encomendas mais rápido.", "aff"], ["Delivery will be cheaper than before.", "A entrega será mais barata do que antes.", "aff"], ["Drones can avoid the traffic.", "Os drones conseguem evitar o trânsito.", "aff"], ["This technology will save energy.", "Essa tecnologia vai economizar energia.", "aff"], ["First of all, drones are very useful.", "Antes de tudo, os drones são muito úteis.", "aff"], ["They fly above the city.", "Eles voam acima da cidade.", "aff"], ["A drone is faster than a truck.", "Um drone é mais rápido que um caminhão.", "aff"], ["The driver pulled over to the side.", "O motorista encostou no acostamento.", "aff"], ["Drones could help protect wildlife.", "Os drones poderiam ajudar a proteger a vida selvagem.", "aff"], ["This will beat the traffic easily.", "Isso vai fugir do trânsito facilmente.", "aff"], ["Drones won't replace trucks completely.", "Os drones não vão substituir os caminhões completamente.", "neg"], ["They won't be safe in every city.", "Eles não serão seguros em todas as cidades.", "neg"], ["This won't take away every job.", "Isso não vai tirar todos os empregos.", "neg"], ["A drone isn't as strong as a truck.", "Um drone não é tão forte quanto um caminhão.", "neg"], ["We don't trust this technology yet.", "Ainda não confiamos nessa tecnologia.", "neg"], ["Won't there be too many drones?", "Não vai ter drones demais?", "int"], ["What if a drone falls?", "E se um drone cair?", "int"], ["Will delivery be cheaper?", "A entrega vai ser mais barata?", "int"], ["Won't they take away people's jobs?", "Eles não vão tirar empregos das pessoas?", "int"], ["Is a drone faster than a truck?", "Um drone é mais rápido que um caminhão?", "int"]]
+    };
+    </script>
+
+    <script>
+    SENT[7] = {
+        "7.1": [["I used to listen to rock as a teenager.", "Eu costumava ouvir rock na adolescência.", "aff"], ["She used to play the guitar.", "Ela costumava tocar violão.", "aff"], ["Thanks to streaming, my collection is bigger.", "Graças ao streaming, minha coleção é maior.", "aff"], ["I'm really into jazz now.", "Agora eu curto muito jazz.", "aff"], ["We used to buy CDs every month.", "Costumávamos comprar CDs todo mês.", "aff"], ["He still listens to country music.", "Ele ainda ouve música country.", "aff"], ["They used to go to concerts together.", "Eles costumavam ir a shows juntos.", "aff"], ["My playlist has tons of new songs.", "Minha playlist tem montes de músicas novas.", "aff"], ["I usually listen to music on the bus.", "Eu costumo ouvir música no ônibus.", "aff"], ["She used to sing in a band.", "Ela costumava cantar em uma banda.", "aff"], ["I'm not into pop music anymore.", "Eu não curto mais música pop.", "neg"], ["He didn't use to like classical music.", "Ele não costumava gostar de música clássica.", "neg"], ["We don't buy much music these days.", "Hoje em dia não compramos muita música.", "neg"], ["She doesn't play the piano anymore.", "Ela não toca mais piano.", "neg"], ["I didn't use to enjoy live concerts.", "Eu não costumava gostar de shows ao vivo.", "neg"], ["What did you use to listen to?", "O que você costumava ouvir?", "int"], ["Did you use to play an instrument?", "Você costumava tocar um instrumento?", "int"], ["Do you still like rock?", "Você ainda gosta de rock?", "int"], ["Which singers did you use to like?", "De quais cantores você costumava gostar?", "int"], ["Didn't you use to sing in a band?", "Você não costumava cantar em uma banda?", "int"]],
+        "7.2": [["A laptop is as good as a TV for me.", "Para mim, um laptop é tão bom quanto uma TV.", "aff"], ["Let's binge-watch the new series tonight.", "Vamos maratonar a série nova hoje à noite.", "aff"], ["The first season is as exciting as the book.", "A primeira temporada é tão empolgante quanto o livro.", "aff"], ["This show is as popular as that one.", "Este programa é tão popular quanto aquele.", "aff"], ["Nothing is as much fun as the cinema.", "Nada é tão divertido quanto o cinema.", "aff"], ["The documentary was very realistic.", "O documentário foi muito realista.", "aff"], ["I watch one episode every night.", "Assisto a um episódio toda noite.", "aff"], ["The effects are amazing on a big screen.", "Os efeitos são incríveis numa tela grande.", "aff"], ["It depends on the genre.", "Depende do gênero.", "aff"], ["The series has a similar story.", "A série tem uma história parecida.", "aff"], ["The sequel isn't as good as the first one.", "A continuação não é tão boa quanto a primeira.", "neg"], ["The effects aren't as exciting at home.", "Os efeitos não são tão empolgantes em casa.", "neg"], ["I don't watch soap operas.", "Eu não assisto novelas.", "neg"], ["This season isn't as frightening as the last.", "Esta temporada não é tão assustadora quanto a última.", "neg"], ["They didn't enjoy the ending.", "Eles não gostaram do final.", "neg"], ["Is the new season as good as the first?", "A nova temporada é tão boa quanto a primeira?", "int"], ["Do you want to binge-watch tonight?", "Você quer maratonar hoje à noite?", "int"], ["Which show is more exciting?", "Qual programa é mais empolgante?", "int"], ["Is it as scary as everyone says?", "É tão assustador quanto dizem?", "int"], ["What genre do you prefer?", "Que gênero você prefere?", "int"]],
+        "7.3": [["I'd love to come over tonight.", "Eu adoraria ir aí hoje à noite.", "aff"], ["Let me know the time.", "Me avise o horário.", "aff"], ["Maybe we can go out this weekend.", "Talvez a gente possa sair neste fim de semana.", "aff"], ["I have to finish a paper first.", "Preciso terminar um trabalho primeiro.", "aff"], ["Let's meet at the cinema.", "Vamos nos encontrar no cinema.", "aff"], ["I'm free on Saturday afternoon.", "Estou livre no sábado à tarde.", "aff"], ["That sounds like a great plan.", "Isso parece um ótimo plano.", "aff"], ["I'll text you the details.", "Vou te mandar os detalhes.", "aff"], ["We could watch a movie instead.", "Podíamos assistir a um filme em vez disso.", "aff"], ["I changed my mind about going out.", "Mudei de ideia sobre sair.", "aff"], ["I can't make it tonight.", "Não vou conseguir ir hoje à noite.", "neg"], ["I'm not free this weekend.", "Não estou livre neste fim de semana.", "neg"], ["She didn't invite us to the party.", "Ela não nos convidou para a festa.", "neg"], ["We don't want to go out tonight.", "Não queremos sair hoje à noite.", "neg"], ["He isn't coming to the cinema.", "Ele não vai ao cinema.", "neg"], ["Do you want to come over?", "Você quer vir aqui?", "int"], ["Are you free on Friday?", "Você está livre na sexta?", "int"], ["Can you make it to the party?", "Você consegue ir à festa?", "int"], ["Why can't you come tonight?", "Por que você não pode vir hoje à noite?", "int"], ["What time should we meet?", "Que horas devemos nos encontrar?", "int"]],
+        "7.4": [["I like shows that deal with real-life topics.", "Gosto de programas que tratam de temas da vida real.", "aff"], ["The actor who plays the hero is famous.", "O ator que faz o herói é famoso.", "aff"], ["Animation has become more amusing nowadays.", "A animação ficou mais divertida hoje em dia.", "aff"], ["According to experts, it relieves stress.", "Segundo especialistas, alivia o estresse.", "aff"], ["I know a website that has free movies.", "Conheço um site que tem filmes grátis.", "aff"], ["She watches cartoons that make her laugh.", "Ela assiste a desenhos que a fazem rir.", "aff"], ["The story takes place in a small town.", "A história se passa em uma cidade pequena.", "aff"], ["It's a series that everyone talks about.", "É uma série da qual todo mundo fala.", "aff"], ["He recorded a podcast about movies.", "Ele gravou um podcast sobre filmes.", "aff"], ["This is the best review that I've read.", "Esta é a melhor resenha que já li.", "aff"], ["I don't watch shows that are too violent.", "Não assisto a programas que são violentos demais.", "neg"], ["She doesn't like movies that are too long.", "Ela não gosta de filmes que são longos demais.", "neg"], ["He isn't an actor who plays villains.", "Ele não é um ator que faz vilões.", "neg"], ["We didn't enjoy the episode that aired last night.", "Não gostamos do episódio que passou ontem à noite.", "neg"], ["They don't make cartoons that are boring.", "Eles não fazem desenhos que são chatos.", "neg"], ["Do you like shows that make you think?", "Você gosta de programas que fazem pensar?", "int"], ["Who is the actor that plays the lead?", "Quem é o ator que faz o protagonista?", "int"], ["Is this the series that won the award?", "Esta é a série que ganhou o prêmio?", "int"], ["Which movie that you watched was the best?", "Qual filme que você assistiu foi o melhor?", "int"], ["What's the show that everyone loves?", "Qual é o programa que todo mundo ama?", "int"]]
+    };
+    SENT[8] = {
+        "8.1": [["I have been studying English all morning.", "Tenho estudado inglês a manhã toda.", "aff"], ["She has been designing a new app.", "Ela tem projetado um novo aplicativo.", "aff"], ["We have been making great progress.", "Temos feito um ótimo progresso.", "aff"], ["He has been working hard on the project.", "Ele tem trabalhado duro no projeto.", "aff"], ["I've been doing my best lately.", "Tenho dado o meu melhor ultimamente.", "aff"], ["They have been coding all week.", "Eles têm programado a semana toda.", "aff"], ["I have been taking it easy this weekend.", "Tenho relaxado neste fim de semana.", "aff"], ["She has been editing the script.", "Ela tem editado o roteiro.", "aff"], ["We have been concentrating on the design.", "Temos nos concentrado no design.", "aff"], ["It'll be worth it in the end.", "Vai valer a pena no final.", "aff"], ["I haven't been getting much sleep.", "Não tenho dormido muito.", "neg"], ["She hasn't been working today.", "Ela não tem trabalhado hoje.", "neg"], ["We haven't been wasting time.", "Não temos perdido tempo.", "neg"], ["He hasn't been feeling well lately.", "Ele não tem se sentido bem ultimamente.", "neg"], ["They haven't been making progress.", "Eles não têm feito progresso.", "neg"], ["What have you been doing lately?", "O que você tem feito ultimamente?", "int"], ["Have you been studying for the test?", "Você tem estudado para a prova?", "int"], ["Has she been working on the app?", "Ela tem trabalhado no aplicativo?", "int"], ["How long have you been learning English?", "Há quanto tempo você está aprendendo inglês?", "int"], ["Have they been making progress?", "Eles têm feito progresso?", "int"]],
+        "8.2": [["I have written three pages so far.", "Escrevi três páginas até agora.", "aff"], ["I have been writing all day.", "Estou escrevendo o dia todo.", "aff"], ["She has finished the first screen.", "Ela terminou a primeira tela.", "aff"], ["I have been doing chores all morning.", "Tenho feito tarefas a manhã toda.", "aff"], ["He has done the laundry already.", "Ele já lavou a roupa.", "aff"], ["We have been painting the kitchen.", "Temos pintado a cozinha.", "aff"], ["It's a long process, but it's worth it.", "É um processo longo, mas vale a pena.", "aff"], ["I have cooked dinner for everyone.", "Cozinhei o jantar para todos.", "aff"], ["She has been fixing the bug for hours.", "Ela está consertando o bug há horas.", "aff"], ["No pain, no gain.", "Sem esforço não há recompensa.", "aff"], ["I haven't finished the dishes yet.", "Ainda não terminei a louça.", "neg"], ["He hasn't tested the app yet.", "Ele ainda não testou o aplicativo.", "neg"], ["We haven't been wasting time.", "Não temos perdido tempo.", "neg"], ["She hasn't done the laundry today.", "Ela não lavou a roupa hoje.", "neg"], ["They haven't painted the room yet.", "Eles ainda não pintaram o quarto.", "neg"], ["Have you finished the report yet?", "Você já terminou o relatório?", "int"], ["How many pages have you written?", "Quantas páginas você escreveu?", "int"], ["Have you been doing the chores?", "Você tem feito as tarefas?", "int"], ["Has she tested the app yet?", "Ela já testou o aplicativo?", "int"], ["What have you been working on?", "Em que você tem trabalhado?", "int"]],
+        "8.3": [["It's been a long time since we met.", "Faz muito tempo que não nos vemos.", "aff"], ["I've been studying full-time since January.", "Estudo em tempo integral desde janeiro.", "aff"], ["He has been working here for three years.", "Ele trabalha aqui há três anos.", "aff"], ["I ran into an old classmate last week.", "Encontrei um antigo colega semana passada.", "aff"], ["We've been living here since 2013.", "Moramos aqui desde 2013.", "aff"], ["She's been looking for a job for months.", "Ela está procurando emprego há meses.", "aff"], ["I've been getting better at interviews.", "Tenho melhorado nas entrevistas.", "aff"], ["They've known each other for ages.", "Eles se conhecem há muito tempo.", "aff"], ["We should catch up soon.", "Devíamos colocar o papo em dia logo.", "aff"], ["I've been busy with school lately.", "Tenho estado ocupado com a escola ultimamente.", "aff"], ["I haven't seen her since last summer.", "Não a vejo desde o verão passado.", "neg"], ["He hasn't found a job yet.", "Ele ainda não achou emprego.", "neg"], ["We haven't talked for weeks.", "Não nos falamos há semanas.", "neg"], ["She hasn't been around lately.", "Ela não tem aparecido ultimamente.", "neg"], ["They haven't visited since the wedding.", "Eles não visitam desde o casamento.", "neg"], ["How have you been?", "Como você tem passado?", "int"], ["How long have you lived here?", "Há quanto tempo você mora aqui?", "int"], ["Have you found a job yet?", "Você já achou emprego?", "int"], ["What have you been up to?", "O que você tem feito de bom?", "int"], ["Have you seen her since then?", "Você a viu desde então?", "int"]],
+        "8.4": [["I've been making to-do lists to save time.", "Tenho feito listas de afazeres para economizar tempo.", "aff"], ["She manages her time very wisely.", "Ela gerencia o tempo de forma muito sábia.", "aff"], ["I get my work done in the morning.", "Faço meu trabalho de manhã.", "aff"], ["He has achieved a lot this year.", "Ele conquistou muito este ano.", "aff"], ["We've been saving energy lately.", "Temos economizado energia ultimamente.", "aff"], ["I prepare everything the night before.", "Preparo tudo na noite anterior.", "aff"], ["Variety is the spice of life.", "A variedade é o tempero da vida.", "aff"], ["I take a short break every hour.", "Faço uma pausa curta a cada hora.", "aff"], ["She finished the task right away.", "Ela terminou a tarefa imediatamente.", "aff"], ["You only live once.", "Só se vive uma vez.", "aff"], ["I've wasted too much time on my phone.", "Desperdicei tempo demais no celular.", "neg"], ["He doesn't waste time in the morning.", "Ele não perde tempo de manhã.", "neg"], ["We haven't finished the list yet.", "Ainda não terminamos a lista.", "neg"], ["She didn't take a break all day.", "Ela não fez pausa o dia todo.", "neg"], ["They don't manage their time well.", "Eles não gerenciam bem o tempo.", "neg"], ["How do you manage your time?", "Como você gerencia seu tempo?", "int"], ["Have you made a to-do list?", "Você fez uma lista de afazeres?", "int"], ["Do you waste time on your phone?", "Você perde tempo no celular?", "int"], ["What have you achieved this year?", "O que você conquistou este ano?", "int"], ["When do you get the most done?", "Quando você rende mais?", "int"]]
+    };
+    SENT[9] = {
+        "9.1": [["You have to sign the contract first.", "Você tem que assinar o contrato primeiro.", "aff"], ["Employees must wear an ID badge.", "Os funcionários devem usar o crachá.", "aff"], ["I need to meet the deadline.", "Preciso cumprir o prazo.", "aff"], ["You have to log in every morning.", "Você tem que fazer login toda manhã.", "aff"], ["He has to manage the whole team.", "Ele tem que gerenciar a equipe toda.", "aff"], ["We must respect the schedule.", "Devemos respeitar o cronograma.", "aff"], ["She has been managing the project successfully.", "Ela tem gerenciado o projeto com sucesso.", "aff"], ["You need to apply before Friday.", "Você precisa se candidatar antes de sexta.", "aff"], ["I have to take a break sometimes.", "Às vezes eu preciso fazer uma pausa.", "aff"], ["They must finish the report today.", "Eles devem terminar o relatório hoje.", "aff"], ["You don't have to work on weekends.", "Você não precisa trabalhar nos fins de semana.", "neg"], ["I don't need to sign anything.", "Não preciso assinar nada.", "neg"], ["She doesn't have to come early.", "Ela não precisa vir cedo.", "neg"], ["We don't have to wear a uniform.", "Não precisamos usar uniforme.", "neg"], ["He didn't have to stay late.", "Ele não precisou ficar até tarde.", "neg"], ["Do I have to sign the contract?", "Eu preciso assinar o contrato?", "int"], ["Do we have to work on weekends?", "Precisamos trabalhar nos fins de semana?", "int"], ["What do I need to bring?", "O que eu preciso trazer?", "int"], ["Does she have to wear a badge?", "Ela precisa usar crachá?", "int"], ["When do you have to finish?", "Quando você tem que terminar?", "int"]],
+        "9.2": [["You can use the kitchen during breaks.", "Você pode usar a cozinha nos intervalos.", "aff"], ["You may take a break whenever you need.", "Você pode fazer uma pausa quando precisar.", "aff"], ["You can log in from home.", "Você pode fazer login de casa.", "aff"], ["Employees may leave at five.", "Os funcionários podem sair às cinco.", "aff"], ["You can ask the manager for help.", "Você pode pedir ajuda ao gerente.", "aff"], ["We can use the meeting room today.", "Podemos usar a sala de reuniões hoje.", "aff"], ["You may bring your own laptop.", "Você pode trazer seu próprio notebook.", "aff"], ["You can take care of that later.", "Você pode cuidar disso depois.", "aff"], ["They can handle the schedule.", "Eles conseguem dar conta do cronograma.", "aff"], ["You may start whenever you're ready.", "Você pode começar quando estiver pronto.", "aff"], ["You must not share your password.", "Você não pode compartilhar sua senha.", "neg"], ["You can't use your phone in meetings.", "Você não pode usar o celular nas reuniões.", "neg"], ["Employees mustn't be late.", "Os funcionários não podem se atrasar.", "neg"], ["You can't leave before noon.", "Você não pode sair antes do meio-dia.", "neg"], ["We mustn't forget the deadline.", "Não podemos esquecer o prazo.", "neg"], ["May I leave early today?", "Posso sair mais cedo hoje?", "int"], ["Can I use the kitchen?", "Posso usar a cozinha?", "int"], ["Can we take a break now?", "Podemos fazer uma pausa agora?", "int"], ["May I bring my own laptop?", "Posso trazer meu próprio notebook?", "int"], ["Can I log in from home?", "Posso fazer login de casa?", "int"]],
+        "9.3": [["Honestly, I'm confident I can do this.", "Honestamente, estou confiante de que consigo.", "aff"], ["I'm good at maths and problem-solving.", "Sou bom em matemática e resolução de problemas.", "aff"], ["I've been training every day since last month.", "Tenho treinado todos os dias desde o mês passado.", "aff"], ["She can handle difficult situations.", "Ela consegue lidar com situações difíceis.", "aff"], ["I can balance work and study.", "Consigo equilibrar trabalho e estudo.", "aff"], ["He's good at working in a team.", "Ele é bom em trabalhar em equipe.", "aff"], ["I feel ready for the challenge.", "Sinto que estou pronto para o desafio.", "aff"], ["We can manage the project together.", "Conseguimos gerenciar o projeto juntos.", "aff"], ["I learn new techniques quickly.", "Aprendo técnicas novas rapidamente.", "aff"], ["The thing is, I love a good challenge.", "A questão é que eu adoro um bom desafio.", "aff"], ["The thing is, I'm afraid of heights.", "A questão é que tenho medo de altura.", "neg"], ["I'm not sure I can handle that alone.", "Não tenho certeza se dou conta disso sozinho.", "neg"], ["He isn't confident about public speaking.", "Ele não está confiante em falar em público.", "neg"], ["I'm not good at mountain biking.", "Eu não sou bom em ciclismo de montanha.", "neg"], ["She doesn't feel ready yet.", "Ela ainda não se sente pronta.", "neg"], ["Are you good at problem-solving?", "Você é bom em resolver problemas?", "int"], ["Can you handle this on your own?", "Você consegue lidar com isso sozinho?", "int"], ["Are you confident about the test?", "Você está confiante quanto à prova?", "int"], ["What are you good at?", "Em que você é bom?", "int"], ["How long have you been training?", "Há quanto tempo você treina?", "int"]],
+        "9.4": [["In my current job, I manage a small team.", "No meu emprego atual, eu gerencio uma equipe pequena.", "aff"], ["I organize the daily schedule.", "Eu organizo a agenda diária.", "aff"], ["In my previous job, I assisted customers.", "No emprego anterior, eu atendia clientes.", "aff"], ["I handled complaints calmly.", "Eu lidava com reclamações com calma.", "aff"], ["I'm applying for the barista position.", "Estou me candidatando à vaga de barista.", "aff"], ["I'm bilingual, so I can help international clients.", "Sou bilíngue, então posso ajudar clientes internacionais.", "aff"], ["I communicate clearly with the team.", "Eu me comunico claramente com a equipe.", "aff"], ["He has been managing the project successfully.", "Ele tem gerenciado o projeto com sucesso.", "aff"], ["I'm a fast learner.", "Aprendo rápido.", "aff"], ["I get along well with people.", "Me dou bem com as pessoas.", "aff"], ["I don't have much café experience yet.", "Ainda não tenho muita experiência em cafeteria.", "neg"], ["She isn't applying for that job.", "Ela não está se candidatando àquela vaga.", "neg"], ["We didn't get along with the old manager.", "Não nos dávamos bem com o antigo gerente.", "neg"], ["He doesn't have a degree in economics.", "Ele não tem diploma em economia.", "neg"], ["I haven't sent my résumé yet.", "Ainda não enviei meu currículo.", "neg"], ["What position are you applying for?", "Para qual vaga você está se candidatando?", "int"], ["Do you have any experience?", "Você tem alguma experiência?", "int"], ["What do you do in your current job?", "O que você faz no seu emprego atual?", "int"], ["Are you good at teamwork?", "Você é bom em trabalho em equipe?", "int"], ["Have you sent your résumé yet?", "Você já enviou seu currículo?", "int"]]
+    };
+    </script>
+
+    <script>
     /* ============================ LIQUID-GLASS APP (B1) ============================ */
     (function() {
         "use strict";
@@ -2209,11 +2275,13 @@
                     },
                     phrases: conv(L.ph),
                     comprehension: (L.cp || []),
-                    gquiz: (L.gq || [])
+                    gquiz: (L.gq || []),
+                    sentences: ((typeof SENT !== 'undefined' && SENT[u.n] && SENT[u.n][L.id]) || [])
                 };
             });
             return {
                 id: u.n,
+                n: u.n,
                 title: 'Unit ' + u.n,
                 subtitle: subtitle,
                 colors: (COLORSETS[u.c] || COLORSETS[1]),
@@ -2643,6 +2711,10 @@
                 '<h3 class="text-lg font-extrabold text-[#1d1d1f] mb-1">' + esc(L.title) + '</h3>' +
                 '<p class="text-sm text-[#86868b] font-semibold leading-snug">' + esc(L.name) + '</p></div>';
             }).join('');
+            cards += '<div onclick="startUnitPractice(' + state.unitIdx + ')" class="lesson-card group flex flex-col items-center text-center sm:col-span-2" style="background:linear-gradient(135deg,rgba(0,102,204,0.14),rgba(51,136,255,0.10))">' +
+            '<div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4 border border-white/60 group-hover:scale-110 transition-transform" style="background:linear-gradient(135deg,#0066cc,#3388ff)"><i data-lucide="trophy" class="w-8 h-8 text-white"></i></div>' +
+            '<h3 class="text-lg font-extrabold text-[#1d1d1f] mb-1">Prática da Unidade</h3>' +
+            '<p class="text-sm text-[#86868b] font-semibold leading-snug"></p></div>';
             return '<div class="flex items-center justify-center min-h-[100dvh] w-full p-4 relative z-20 animate-fade-in folder-overlay">' +
             '<button onclick="goHome()" class="absolute top-4 md:top-6 left-4 md:left-6 p-3 rounded-full bg-white/40 backdrop-blur-md border border-white/60 text-slate-700 hover:bg-white/60 transition z-50"><i data-lucide="x" class="w-6 h-6"></i></button>' +
             '<div class="folder-container flex flex-col items-center w-full max-w-4xl">' +
@@ -2801,7 +2873,7 @@
             return pool;
         }
         function genActivities(U, L) {
-            /* pools: lesson primeiro, com apoio do contexto da unidade inteira */
+            /* pools: lição primeiro, com apoio do contexto da unidade inteira */
             var vocab = buildPool(L);
             var unitVocab = [],
                 seen = {};
@@ -2817,19 +2889,6 @@
             if (unitVocab.length < 4)
                 unitVocab = vocab.slice();
             var dpool = unitVocab.length >= 6 ? unitVocab : vocab;
-            var phrases = (L.phrases || []).filter(function(p) {
-                return wordsOK(p.en);
-            });
-            var unitPhrases = [];
-            (U.lessons || [L]).forEach(function(LL) {
-                (LL.phrases || []).forEach(function(p) {
-                    if (wordsOK(p.en))
-                        unitPhrases.push(p);
-                });
-            });
-            var allPhrases = phrases.length ? phrases.concat(unitPhrases.filter(function(p) {
-                return phrases.indexOf(p) < 0;
-            })) : unitPhrases;
             var comp = (L.comprehension && L.comprehension.length) ? L.comprehension : [];
             if (!comp.length) {
                 for (var i = 0; i < (U.lessons || []).length; i++) {
@@ -2847,25 +2906,70 @@
                     });
             });
 
-            /* ---- buckets por tipo ---- */
-            var B = {
-                ctx: [],
-                listen: [],
-                dict: [],
-                fill: [],
-                order: [],
-                write: [],
-                choose: [],
-                grammar: [],
-                match: [],
-                mem: [],
-                conj: []
-            };
+            /* ---- as 20 frases obrigatórias (10 afirmativas, 5 negativas, 5 interrogativas) ---- */
+            function sentenceAct(s, kind) {
+                var en = String(s[0]).replace(/[.?!]$/, ''),
+                    pt = s[1],
+                    st = s[2];
+                var words = en.split(/\s+/).filter(Boolean);
+                if (kind === 'fill' && words.length >= 4) {
+                    var gi = 1 + Math.floor(Math.random() * (words.length - 1));
+                    var correct = words[gi].replace(/[^A-Za-z']/g, '');
+                    if (correct) {
+                        var opts = [correct].concat(distract(dpool, 'en', correct, 3).map(function(w) {
+                            return w.split(/\s+/)[0];
+                        }));
+                        return {
+                            type: 'fillBlank',
+                            pt: pt,
+                            stype: st,
+                            words: words,
+                            gapIndex: gi,
+                            answer: correct,
+                            options: shuffle(opts)
+                        };
+                    }
+                    kind = 'order';
+                }
+                if (kind === 'order') {
+                    var dist = distract(dpool, 'en', en, 3).map(function(w) {
+                        return w.split(/\s+/)[0];
+                    });
+                    return {
+                        type: 'translateEn',
+                        en: en,
+                        pt: pt,
+                        stype: st,
+                        answer: words,
+                        pool: shuffle(words.concat(dist))
+                    };
+                }
+                if (kind === 'dict') {
+                    return {
+                        type: 'typeHear',
+                        text: en,
+                        pt: pt,
+                        stype: st
+                    };
+                }
+                return {
+                    type: 'writeSentence',
+                    en: en,
+                    pt: pt,
+                    stype: st
+                };
+            }
+            var sents = (L.sentences && L.sentences.length) ? L.sentences.slice() : [];
+            var kinds = ['order', 'fill', 'dict', 'write'];
+            var sx = sents.map(function(s, i) {
+                return sentenceAct(s, kinds[i % 4]);
+            });
 
-            // CONTEXTO (áudio/texto + pergunta) — estilo prova de proficiência
+            /* ---- exercícios extras (vocabulário, áudio, gramática, compreensão) ---- */
+            var ctx = [];
             shuffle(comp).forEach(function(c) {
                 (c.questions || []).forEach(function(q) {
-                    B.ctx.push({
+                    ctx.push({
                         type: 'context',
                         ctype: c.type,
                         title: c.title,
@@ -2877,112 +2981,46 @@
                     });
                 });
             });
-
-            // OUVIR e escolher (áudio)
-            sample(vocab, 4).forEach(function(it) {
-                var opts = [it.en].concat(distract(dpool, 'en', it.en, 3));
-                B.listen.push({
+            ctx = ctx.slice(0, 3);
+            var listen = sample(vocab, 3).map(function(it) {
+                return {
                     type: 'listen',
                     item: it,
-                    options: shuffle(opts)
-                });
+                    options: shuffle([it.en].concat(distract(dpool, 'en', it.en, 3)))
+                };
             });
-
-            // DITADO: ouvir a frase e escrever (áudio + escrita)
-            sample(allPhrases, 3).forEach(function(p) {
-                B.dict.push({
-                    type: 'typeHear',
-                    text: p.en.replace(/[.?!]$/, ''),
-                    pt: p.pt
-                });
-            });
-
-            // COMPLETAR a frase (contexto)
-            sample(allPhrases, 3).forEach(function(p) {
-                var words = p.en.replace(/[.?!]$/, '').split(/\s+/).filter(Boolean);
-                if (words.length < 3)
-                    return;
-                var gi = 1 + Math.floor(Math.random() * (words.length - 1));
-                var correct = words[gi].replace(/[^A-Za-z']/g, '');
-                if (!correct)
-                    return;
-                var opts = [correct].concat(distract(dpool, 'en', correct, 3).map(function(w) {
-                    return w.split(/\s+/)[0];
-                }));
-                B.fill.push({
-                    type: 'fillBlank',
-                    pt: p.pt,
-                    words: words,
-                    gapIndex: gi,
-                    answer: correct,
-                    options: shuffle(opts)
-                });
-            });
-
-            // ORDENAR palavras para montar a frase
-            sample(allPhrases, 4).forEach(function(p) {
-                var answer = p.en.replace(/[.?!]$/, '').split(/\s+/).filter(Boolean);
-                var dist = distract(dpool, 'en', answer.join(' '), 3).map(function(w) {
-                    return w.split(/\s+/)[0];
-                });
-                B.order.push({
-                    type: 'translateEn',
-                    en: p.en.replace(/[.?!]$/, ''),
-                    pt: p.pt,
-                    answer: answer,
-                    pool: shuffle(answer.concat(dist))
-                });
-            });
-
-            // ESCREVER a frase inteira em inglês (produção livre)
-            sample(allPhrases, 3).forEach(function(p) {
-                B.write.push({
-                    type: 'writeSentence',
-                    en: p.en.replace(/[.?!]$/, ''),
-                    pt: p.pt
-                });
-            });
-
-            // VOCABULÁRIO em contexto (pt->en e en->pt)
-            sample(vocab, 2).forEach(function(it) {
-                B.choose.push({
+            var choose = sample(vocab, 2).map(function(it) {
+                return {
                     type: 'choosePt',
                     item: it,
                     options: shuffle([it.pt].concat(distract(dpool, 'pt', it.pt, 3)))
-                });
-            });
-            sample(vocab, 2).forEach(function(it) {
-                B.choose.push({
+                };
+            })
+            .concat(sample(vocab, 2).map(function(it) {
+                return {
                     type: 'chooseEn',
                     item: it,
                     options: shuffle([it.en].concat(distract(dpool, 'en', it.en, 3)))
-                });
-            });
-
-            // GRAMÁTICA em contexto
-            sample(gq, 4).forEach(function(q) {
-                B.grammar.push({
+                };
+            }));
+            var grammar = sample(gq, 4).map(function(q) {
+                return {
                     type: 'grammarMC',
                     q: q.q,
                     options: q.opts.slice(),
                     answerIdx: q.a,
                     why: q.why
-                });
+                };
             });
-
-            // ASSOCIAR / MEMÓRIA
-            if (vocab.length >= 4)
-                B.match.push({
-                    type: 'match',
-                    pairs: sample(vocab, Math.min(4, vocab.length))
-                });
-            if (vocab.length >= 6)
-                B.mem.push({
-                    type: 'memory',
-                    pairs: sample(vocab, 3)
-                });
-
-            // CONJUGAÇÃO de UMA forma específica — raro (no máx. 1, ~35% das vezes)
+            var match = vocab.length >= 4 ? [{
+                type: 'match',
+                pairs: sample(vocab, Math.min(4, vocab.length))
+            }] : [];
+            var mem = vocab.length >= 6 ? [{
+                type: 'memory',
+                pairs: sample(vocab, 3)
+            }] : [];
+            var conj = [];
             if (Math.random() < 0.35) {
                 var irr = (L.content.verbs || []).filter(function(v) {
                     var b = v.en.replace(/^to /, '');
@@ -2992,7 +3030,7 @@
                 if (vv.length) {
                     var v = sample(vv, 1)[0];
                     var form = Math.random() < 0.6 ? 'past' : 'pp';
-                    B.conj.push({
+                    conj.push({
                         type: 'conj',
                         base: v.en.replace(/^to /, ''),
                         pt: v.pt,
@@ -3002,30 +3040,70 @@
                 }
             }
 
-            /* ---- sequência: começa com áudio/texto e intercala os tipos ---- */
-            var plan = ['ctx', 'listen', 'dict', 'order', 'grammar', 'fill', 'ctx', 'write', 'listen', 'choose', 'order', 'dict', 'grammar', 'fill', 'write', 'choose', 'conj', 'listen', 'order', 'ctx', 'match', 'grammar', 'mem', 'write'];
-            var acts = [];
-            plan.forEach(function(name) {
-                if (B[name] && B[name].length)
-                    acts.push(B[name].shift());
+            /* ---- sequência: áudio/texto primeiro, depois as 20 frases intercaladas com os extras ---- */
+            var head = [];
+            if (ctx.length)
+                head.push(ctx.shift());
+            if (listen.length)
+                head.push(listen.shift());
+            if (ctx.length)
+                head.push(ctx.shift());
+            var extras = listen.concat(grammar, choose, conj, ctx, match, mem);
+            var woven = [],
+                ei = 0;
+            sx.forEach(function(a, i) {
+                woven.push(a);
+                if (i % 2 === 1 && ei < extras.length) {
+                    woven.push(extras[ei++]);
+                }
             });
-            // anexa o que sobrou, intercalando, p/ aproveitar todo o conteúdo
-            var rest = [];
-            Object.keys(B).forEach(function(k) {
-                B[k].forEach(function(a) {
-                    rest.push(a);
+            while (ei < extras.length)
+                woven.push(extras[ei++]);
+            return head.concat(woven);
+        }
+        function buildUnitSentences(U) {
+            var all = [];
+            (U.lessons || []).forEach(function(L) {
+                (L.sentences || []).forEach(function(s) {
+                    all.push(s);
                 });
             });
-            acts = acts.concat(shuffle(rest));
-            return acts.slice(0, 20);
+            function pick(t, n) {
+                return shuffle(all.filter(function(s) {
+                    return s[2] === t;
+                })).slice(0, n);
+            }
+            return shuffle(pick('aff', 10).concat(pick('neg', 5)).concat(pick('int', 5)));
         }
-        function startPractice(unitIdx, lessonIdx) {
-            if (lessonIdx === undefined)
-                lessonIdx = state.lessonIdx || 0;
-            var U = courseData[unitIdx];
-            P.activities = genActivities(U, U.lessons[lessonIdx]);
+        function mergedUnitLesson(U) {
+            var m = {
+                content: {
+                    verbs: [],
+                    nouns: [],
+                    adjectives: [],
+                    adverbs: [],
+                    expressions: [],
+                    grammar: []
+                },
+                phrases: [],
+                comprehension: [],
+                gquiz: [],
+                sentences: buildUnitSentences(U)
+            };
+            (U.lessons || []).forEach(function(L) {
+                ['verbs', 'nouns', 'adjectives', 'adverbs', 'expressions', 'grammar'].forEach(function(k) {
+                    m.content[k] = m.content[k].concat(L.content[k] || []);
+                });
+                m.phrases = m.phrases.concat(L.phrases || []);
+                m.comprehension = m.comprehension.concat(L.comprehension || []);
+                m.gquiz = m.gquiz.concat(L.gquiz || []);
+            });
+            return m;
+        }
+        function launchPractice(U, L, label) {
+            P.activities = genActivities(U, L);
             if (!P.activities.length) {
-                alert('Conteúdo insuficiente nesta lição.');
+                alert('Conteúdo insuficiente.');
                 return;
             }
             try {
@@ -3041,6 +3119,16 @@
             m.classList.remove('hidden');
             m.classList.add('flex');
             loadActivity();
+        }
+        function startPractice(unitIdx, lessonIdx) {
+            if (lessonIdx === undefined)
+                lessonIdx = state.lessonIdx || 0;
+            var U = courseData[unitIdx];
+            launchPractice(U, U.lessons[lessonIdx]);
+        }
+        function startUnitPractice(unitIdx) {
+            var U = courseData[unitIdx];
+            launchPractice(U, mergedUnitLesson(U));
         }
         function closePractice() {
             if (P.idx >= P.activities.length || confirm('Sair da prática? O progresso será perdido.')) {
@@ -3085,7 +3173,15 @@
                 conj: (a.form === 'pp' ? 'Escreva o particípio (past participle)' : 'Escreva o simple past'),
                 context: 'Compreensão (leitura / áudio)'
             };
-            title.innerText = titles[a.type] || '';
+            var ttl = titles[a.type] || '';
+            if (a.stype) {
+                ttl += ' (' + ({
+                    aff: 'afirmativa',
+                    neg: 'negativa',
+                    int: 'interrogativa'
+                }[a.stype] || '') + ')';
+            }
+            title.innerText = ttl;
             ({
                 match: renderMatch,
                 memory: renderMemory,
@@ -3694,6 +3790,7 @@
         window.toggleSidebar = toggleSidebar;
         window.toggleConj = toggleConj;
         window.startPractice = startPractice;
+        window.startUnitPractice = startUnitPractice;
         window.closePractice = closePractice;
         window.checkAnswer = checkAnswer;
         window.skipActivity = skipActivity;
